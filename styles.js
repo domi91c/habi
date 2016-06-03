@@ -6,10 +6,11 @@ const constants = {
 
 var styles = StyleSheet.create({
   linearGradient: {
+    backgroundColor: 'transparent',
+    paddingTop: 22,
     flex: 1,
-    paddingLeft: 15,
-    paddingRight: 15,
-    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonText: {
     fontSize: 18,
@@ -18,33 +19,6 @@ var styles = StyleSheet.create({
     margin: 10,
     color: '#ffffff',
     backgroundColor: 'transparent'
-  },
-  container: {
-    backgroundColor: 'transparent',
-    paddingTop: 22,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    /* Rectangle 5: */
-  },
-  listview: {
-    flex: 1,
-  },
-  li: {
-    backgroundColor: '#fff',
-    borderBottomColor: '#eee',
-    borderColor: 'transparent',
-    borderWidth: 1,
-    paddingLeft: 16,
-    paddingTop: 14,
-    paddingBottom: 16,
-  },
-  liContainer: {
-    flex: 2,
-  },
-  liText: {
-    color: '#333',
-    fontSize: 16,
   },
   navbar: {
     alignItems: 'center',
@@ -79,7 +53,7 @@ var styles = StyleSheet.create({
     height: 340,
     width: 340,
     borderRadius: 170,
-    backgroundColor: '#BBD3EF',
+    backgroundColor: '#9FEBA5',
   },
 });
 

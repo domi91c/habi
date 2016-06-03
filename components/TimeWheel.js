@@ -17,7 +17,7 @@ import * as Progress from 'react-native-progress';
 class TimeWheel extends Component {
   render() {
     return (
-      <Progress.Circle animate={false} size={340} progress={( this.props.seconds/60 )} thickness={15} showsText={true}>
+      <Progress.Circle animate={false} size={340} progress={( this.props.seconds/60 )} thickness={15} showsText={true} color='white'>
         <Text>
           {this.props.seconds}
         </Text>

@@ -113,16 +113,19 @@ class Habi extends Component {
 
   render() {
     return (
-    <LinearGradient colors={['#9FEBA5', '#9FEBA5', '#FFFFFF']} style={styles.linearGradient}>
-      <View style={styles.container}>
-        <TouchableOpacity style={styles.timerButton} underlaycolor={constants.actionColor} onPress={this.props.onPress}
+      <LinearGradient
+        start={[1, 0.0]} end={[1, 1]}
+        colors={['#9FEBA5', '#ffffff', '#ffffff']}
+        style={styles.linearGradient}>
+        <TouchableOpacity style={styles.timerButton} underlaycolor={constants.actionColor}
+                          onPress={this.props.onPress}
                           activeOpacity={.6}>
           <Text style={styles.elapsedText}>{this.props.time}</Text>
-          <TimeWheel elapsedRand={this.state.randomNumber} seconds={this.state.seconds}/>
+          <TimeWheel elapsedRand={this.state.randomNumber} seconds={this.state.seconds}>
+
+          </TimeWheel>
         </TouchableOpacity>
-{/*         <Gradient /> */}
-      </View>
-    </LinearGradient>
+      </LinearGradient>
     );
   }
 
