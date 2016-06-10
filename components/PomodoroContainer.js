@@ -16,29 +16,23 @@ import {
   NavigatorIOS
 } from 'react-native';
 
-
-const styles = require('./styles');
-const constants = styles.constants;
-
-const PomodoroContainer = require('./components/PomodoroContainer');
-const InitialView = require('./components/InitialView');
-const ListContainer = require('./components/ListContainer');
-const Hearts = require('./components/Hearts');
-
-const ActionButton = require('./components/ActionButton');
-
 require('datejs');
 
-const TimeWheel = require('./components/TimeWheel');
+const styles = require('../styles');
+const constants = styles.constants;
+
 const LinearGradient = require('react-native-linear-gradient');
-const Gradient = require('./components/Gradient');
+const TimeWheel = require('./TimeWheel');
+const Hearts = require('./Hearts');
 
 
-class Habi extends Component {
+
+
+
+class PomodoroContainer extends Component {
   constructor() {
     super();
 
-    //noinspection JSUnresolvedVariable
     this.state = {
       dataSource: new ListView.DataSource({
         rowHasChanged: (row1, row2) => row1 !== row2,
@@ -114,33 +108,31 @@ class Habi extends Component {
     console.log(this.getTimeRemaining("May 27 2016 00:31:31"));
   }
 
-  
 
   render() {
     return (
-    <View >
-      <LinearGradient
-        start={[1, 0.0]}
-        end={[1, 1]}
-        colors={['#9FEBA5', '#ffffff', '#ffffff']}
-        style={styles.linearGradient}>
-        
-        <Text
-          style={styles.elapsedText}>{this.props.time}
-        </Text>
-        <TimeWheel
-          elapsedRand={this.state.randomNumber}
-          seconds={this.state.seconds}>
-        </TimeWheel>
-        <Hearts  />
-      </LinearGradient>
-    </View>
+      <View>
+        <LinearGradient
+          start={[1, 0.0]}
+          end={[1, 1]}
+          colors={['#9FEBA5', '#ffffff', '#ffffff']}
+          style={styles.linearGradient}>
+          <Text
+            style={styles.elapsedText}>{this.props.time}
+          </Text>
+          <TimeWheel
+            elapsedRand={this.state.randomNumber}
+            seconds={this.state.seconds}>
+          </TimeWheel>
+          <Hearts  />
+        </LinearGradient>
+      </View>
     );
   }
 
 }
 
-AppRegistry.registerComponent('Habi', () => Habi);
+module.exports = PomodoroContainer;
 
 
 /*<NavigatorIOS

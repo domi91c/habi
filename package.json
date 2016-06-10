@@ -12,8 +12,10 @@
     "react-native": "^0.26.2",
     "react-native-circular-progress": "0.0.7",
     "react-native-gifted-messenger": "^0.1.4",
+    "react-native-icons": "^0.7.1",
     "react-native-linear-gradient": "^1.5.9",
     "react-native-progress": "^3.0.0",
+    "react-native-vector-icons": "^2.0.3",
     "styles": "latest"
   }
 }
